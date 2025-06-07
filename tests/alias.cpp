@@ -2,16 +2,22 @@
 using namespace std;
 
 
-
+void changeA(int & b) {
+    b = 10;
+}
 
 int main() {
 
 
     int a = 5;
 
-    int &b = a;
+    int *b = &a;
 
-    std::cout << a << b << std::endl;
+    changeA(a);
+
+    cout << *&a << *b << endl;
+
+    std::cout << a << std::endl;
 
     return 0;
 }
