@@ -7,11 +7,11 @@ int main(){
     // scanf("%d", &n);
 
     int bin = 0;
-    int c = 1;
+    int c = 0;
     while(n>0){
-        bin = bin+ (n%2)*c;
+        bin = bin+ (n%2)*pow(10,c);
         n = n/2;
-        c=c*10;
+        c++;
     }
     
 
