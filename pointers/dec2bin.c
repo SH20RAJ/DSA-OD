@@ -1,8 +1,8 @@
 #include<stdio.h>
-
+#include<math.h>
 int main(){
 
-    int n = 4;
+    int n = 6;
     // printf("Enter no to convert to binary");
     // scanf("%d", &n);
 
