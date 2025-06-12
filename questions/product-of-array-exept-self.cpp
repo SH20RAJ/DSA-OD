@@ -38,10 +38,15 @@ int main()
     cout << endl;
     // suffix 
 
-    for (int i = size - 2; i > 0; i--)
+    int suff = 1;
+    for (int i = size - 2; i >= 0; i--)
     {
-        ans[i] = ans[i+1] * arr[i + 1];
-        cout << "answer in loop " << ans[i] << " , " << i << " " << arr[i]<< endl;
+        suff *= arr[i +1];
+        cout << " suff - "<< suff << " "<< i << " " << ans[i] << endl;
+        ans[i] = ans[i] * suff;
+        cout << ans[i] << endl;
+
+
     }
 
     // print answer
