@@ -30,10 +30,10 @@ int main()
         ans[i] = ans[i - 1] * arr.at(i - 1);
     }
 
-    for (int i = 0; i < size; i++)
-    {
-        cout << ans[i] << " , ";
-    }
+    // for (int i = 0; i < size; i++)
+    // {
+    //     cout << ans[i] << " , ";
+    // }
 
     cout << endl;
     // suffix 
