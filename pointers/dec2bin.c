@@ -21,7 +21,7 @@ int dec2b(int decNum) {
 
 int main(){
 
-    int n = 3;
+    int n = 52;
     int n2 = n;
     // printf("Enter no to convert to binary");
     // scanf("%d", &n);
