@@ -22,10 +22,12 @@ using namespace std;
 // -----------------------------------------------------------------------------
 // CHAPTER 1: Basic Class and Object
 // -----------------------------------------------------------------------------
-class Basic {
+class Basic
+{
 public:
     int data;
-    void show() {
+    void show()
+    {
         cout << "[Basic] Data: " << data << endl;
     }
 };
@@ -33,19 +35,23 @@ public:
 // -----------------------------------------------------------------------------
 // CHAPTER 2: Constructors and Destructors
 // -----------------------------------------------------------------------------
-class WithConstructor {
+class WithConstructor
+{
 public:
     int value;
     // Default constructor
-    WithConstructor() : value(0) {
+    WithConstructor() : value(0)
+    {
         cout << "[WithConstructor] Default constructor called\n";
     }
     // Parameterized constructor
-    WithConstructor(int v) : value(v) {
+    WithConstructor(int v) : value(v)
+    {
         cout << "[WithConstructor] Parameterized constructor called\n";
     }
     // Destructor
-    ~WithConstructor() {
+    ~WithConstructor()
+    {
         cout << "[WithConstructor] Destructor called\n";
     }
 };
@@ -53,11 +59,14 @@ public:
 // -----------------------------------------------------------------------------
 // CHAPTER 3: Access Specifiers (public, private, protected)
 // -----------------------------------------------------------------------------
-class AccessDemo {
+class AccessDemo
+{
 private:
     int secret;
+
 protected:
     int semiSecret;
+
 public:
     int open;
     AccessDemo() : secret(1), semiSecret(2), open(3) {}
@@ -67,24 +76,29 @@ public:
 // -----------------------------------------------------------------------------
 // CHAPTER 4: Member Functions (Inside & Outside Class)
 // -----------------------------------------------------------------------------
-class MemberFuncDemo {
+class MemberFuncDemo
+{
     int x;
+
 public:
-    void setX(int val); // Declaration
+    void setX(int val);      // Declaration
     int getX() { return x; } // Inline definition
 };
-void MemberFuncDemo::setX(int val) { // Outside class definition
+void MemberFuncDemo::setX(int val)
+{ // Outside class definition
     x = val;
 }
 
 // -----------------------------------------------------------------------------
 // CHAPTER 5: Static Members
 // -----------------------------------------------------------------------------
-class StaticDemo {
+class StaticDemo
+{
 public:
     static int count;
     StaticDemo() { count++; }
-    static void showCount() {
+    static void showCount()
+    {
         cout << "[StaticDemo] Count: " << count << endl;
     }
 };
@@ -93,28 +107,34 @@ int StaticDemo::count = 0;
 // -----------------------------------------------------------------------------
 // CHAPTER 6: Friend Functions
 // -----------------------------------------------------------------------------
-class FriendDemo {
+class FriendDemo
+{
     int data;
+
 public:
     FriendDemo(int d) : data(d) {}
-    friend void showFriendData(const FriendDemo&);
+    friend void showFriendData(const FriendDemo &);
 };
-void showFriendData(const FriendDemo& f) {
+void showFriendData(const FriendDemo &f)
+{
     cout << "[FriendDemo] Friend function accessed data: " << f.data << endl;
 }
 
 // -----------------------------------------------------------------------------
 // CHAPTER 7: Inheritance (Single, Multilevel)
 // -----------------------------------------------------------------------------
-class Base {
+class Base
+{
 public:
     void baseFunc() { cout << "[Base] Base function\n"; }
 };
-class Derived : public Base {
+class Derived : public Base
+{
 public:
     void derivedFunc() { cout << "[Derived] Derived function\n"; }
 };
-class MoreDerived : public Derived {
+class MoreDerived : public Derived
+{
 public:
     void moreDerivedFunc() { cout << "[MoreDerived] MoreDerived function\n"; }
 };
@@ -186,9 +206,11 @@ void printIntroduction(const Person &p)
 // -----------------------------------------------------------------------------
 // CHAPTER 9: Encapsulation (Getters/Setters)
 // -----------------------------------------------------------------------------
-class Encapsulated {
+class Encapsulated
+{
 private:
     int value;
+
 public:
     void setValue(int v) { value = v; }
     int getValue() const { return value; }

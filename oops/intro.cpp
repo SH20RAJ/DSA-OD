@@ -4,6 +4,7 @@ using namespace std;
 
 class Student
 {
+    public:
     string name;
     string address;
     int rollno;
@@ -19,13 +20,7 @@ int main()
 
     Student s1;
     s1.changeName("Shaswat");
-    // The above line will cause a compilation error because changeName is a private member function.
-    // To fix this, we can make changeName a public member function.
-    // Uncomment the following line to see the error:
-    // s1.changeName("Shaswat");
-    cout << "Hello, World!" << endl;
-    // The above line will print "Hello, World!" to the console.
-    
+    cout << s1.name << endl;
 
     return 0;
 }
